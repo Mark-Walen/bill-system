@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:postgresql://localhost:5432/bill_system
+      username: postgres
+      password: root
+      driver-class-name: org.postgresql.Driver
+      initialSize: 5
+      minIdle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 60000
+      validation-query: SELECT 1
+      test-on-borrow: true
+      test-on-return: true
+      max-pool-prepared-statement-per-connection-size: 20
+      keep-alive: true
+      use-global-data-source-stat: true
+      connect-properties: druid.filter.stat.merge-sql=true;druid.filter.stat.slow-sql-millis=500
+    hikari:
+      schema: classpath:database.sql
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    connect-timeout: 5000ms
+    timeout: 5000ms
+    client-type: lettuce
+    expire: 400
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

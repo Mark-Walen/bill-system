@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/js-sha256/0.9.0/sha256.js"></script>
+<script>
+    let username = 'admin'
+    let nonce = '06ab2c2ed29e0e3092f4b6d88a3886a6e77964731753b12b576a3505814c2f31'
+    let pwdMd5 = '21232f297a57a5a743894a0e4a801fc3'
+    console.log(sha256(JSON.stringify([username, pwdMd5, nonce])))
+</script>
+</html>
