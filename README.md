@@ -1,4 +1,6 @@
 # 记账系统
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Mark-Walen/bill-system) ![GitHub contributors](https://img.shields.io/github/contributors/Mark-Walen/bill-system)
 ## 需求分析
 
 - 记账功能
